@@ -7,6 +7,11 @@ class Square:
     """square implementation
     """
     def __init__(self, size=0):
+        """Initializer
+
+        Args:
+            size: square size
+        """
         if !(isinstance(size, int)):
             raise TypeError('size must be an integer')
         elif size <= 0:
