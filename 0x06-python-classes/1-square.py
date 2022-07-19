@@ -4,6 +4,8 @@
 
 
 class Square:
+    """Implementation of Square
+    """
     def __init__(self, size):
         """Initializer
 
