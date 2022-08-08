@@ -63,3 +63,16 @@ class Base:
             new = cls(10, 10)
         new.update(**dictionary)
         return new
+
+    @classmethod
+    def load_from_file(cls):
+        """load from file"""
+        filename = cls.__name__ + ".json"
+        object_created = []
+        with open(filename, 'r') as f:
+            file_string = f.read().replace('\n', '')
+            data = cls.from_json_string(file_string)
+            for el in data:
+                object_created.append(cls.create(**el))
+
+        return object_created
