@@ -89,3 +89,8 @@ class Rectangle(Base):
         """
         self.check_type_value('y', y, True)
         self.__y = y
+
+    def area(self) -> int:
+        """area
+        """
+        return self.width * self.height
